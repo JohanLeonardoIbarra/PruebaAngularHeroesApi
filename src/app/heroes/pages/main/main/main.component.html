@@ -1,0 +1,23 @@
+<nav class="navbar bg-dark">
+    <div class="container-fluid text-white">
+      <h1>HeroesApp</h1>
+      <button routerLink="/" class="btn btn-light">Sign-Out</button>
+    </div>
+  </nav>
+<div class="heroes">
+    <div class="row full">
+        <div class="col-2 bg-dark">
+            <app-buscar (onSubmit)="getHeroes( $event )"></app-buscar>
+        </div>
+        <div class="col-10">
+            <div class="row">
+                <div class="col-6">
+                    <app-mostrar [heroes]="heroes"></app-mostrar>
+                </div>
+                <div class="col-6">
+                    <app-favoritos></app-favoritos>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

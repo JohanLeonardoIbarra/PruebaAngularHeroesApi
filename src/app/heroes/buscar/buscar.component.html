@@ -1,0 +1,9 @@
+<div class="bg-dark text-white h-100">
+    <form class="" (ngSubmit)="buscarHeroes()">
+        <label for="buscar">Buscar Heroes</label>
+        <input required class="form-control" type="text" [(ngModel)]="termino" name="buscar">
+    </form>
+    <div *ngIf="error">
+        <div class="alert alert-danger">Valor Requerido</div>
+    </div>
+</div>

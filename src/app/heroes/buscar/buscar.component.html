@@ -1,6 +1,6 @@
-<div class="bg-dark text-white h-100">
+<div class="text-white container-fluid h-100">
+  <h2 class="display-6">Buscar Heroes</h2>
     <form class="" (ngSubmit)="buscarHeroes()">
-        <label for="buscar">Buscar Heroes</label>
         <input required class="form-control" type="text" [(ngModel)]="termino" name="buscar">
     </form>
     <div *ngIf="error">

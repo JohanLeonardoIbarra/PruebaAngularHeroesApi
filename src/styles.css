@@ -1,5 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body, html{
+  background-color: #222;
+}
+
+.main{
+  width: 100%;
+  height: 100vh;
+}
+
 .cuadricula{
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start
+}
+
+.panel{
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.sidebar{
+  position: sticky;
+  top: 0;
 }

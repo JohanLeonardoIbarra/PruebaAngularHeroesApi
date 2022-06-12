@@ -1,10 +1,10 @@
 <div class="cuadricula">
-    <div class="card" style="width: 18rem;" *ngFor="let heroe of heroes">
-        <img src="{{ heroe.thumbnail.path + '.' +heroe.thumbnail.extension }}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{ heroe.name }}</h5>
-          <p class="card-text">{{ heroe.description }}</p>
-          <button class="btn btn-primary" (click)="agregarAFavoritos(heroe)">Agregar A Favoritos</button>
-        </div>
-      </div>
+  <h2 class="w-100 text-center display-5">Heroes</h2>
+  <div class="card" style="width: 50%;" *ngFor="let heroe of heroes">
+    <img src="{{ heroe.thumbnail.path + '.' +heroe.thumbnail.extension }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ heroe.name }}</h5>
+      <button class="btn btn-primary" (click)="agregarAFavoritos(heroe)">Agregar A Favoritos</button>
+    </div>
+  </div>
 </div>

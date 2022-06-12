@@ -1,12 +1,15 @@
-<div>
-    <h1 class="bg-info">Login Component</h1>
-    <div>
-        <h2 class="text-info">Login</h2>
-        <hr>
-        <form (ngSubmit)="login()">
-            <input type="text" required placeholder="Username" [(ngModel)]="user.username"  name="username" >
-            <input type="password" required placeholder="Password" [(ngModel)]="user.pass" name="pass">
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </div>
+<div *ngIf="error" class="w-100 position-absolute">
+  <div class="alert alert-danger">Usuario o Contraseña Incorrectos</div>
+</div>
+<div class="w-100 h-100 d-flex justify-content-center align-items-center">
+  <div class="container d-flex flex-wrap justify-content-center">
+    <h2 class="text-white text-center w-100">Login</h2>
+    <form class="form" (ngSubmit)="login()">
+      <input type="text" class="form-control" required placeholder="Username" [(ngModel)]="user.username"
+        name="username">
+      <input type="password" class="form-control" required placeholder="Password" [(ngModel)]="user.pass" name="pass">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
 </div>

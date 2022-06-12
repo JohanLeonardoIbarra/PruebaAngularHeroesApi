@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { User } from '../interfaces/user.interface';
 import { UsersService } from '../users.service';
 
@@ -24,7 +25,8 @@ export class LoginComponent implements OnInit {
       this.error = true
       return;
     };
-    console.log(this.user);
+    if(this.userService.compare(this.user)) window.open("/heroes", "_self")
+    else this.error = true
   }
 
   ngOnInit(): void {
